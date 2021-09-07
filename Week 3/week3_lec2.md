@@ -37,21 +37,20 @@ Time Complexity : O(|E| log |E|) + O(|E| log∗ |V |),
 
 ### The CUT property
 
-*Suppose edges* X *are part of a minimum spanning tree of* G = (V, E)*. Pick any subset of nodes* S *for which* X *does not cross between* S *and* V − S*, and let* e *be the lightest edge across this partition. Then X ∪ e is part of some MST.*
+Let's assume edges X are part of a MST of G = (V, E). Let us choose any subset of nodes S for which X does not cross between S and V − S, and let e be the lightest edge across this partition. Then X ∪ e is part of some Minimum Spanning Tree.
 
 **Proof**. 
 
 If e is a part of T, then it is trivial.
 
-If e is not a part of T , let us construct another MST, T ′, which contains X ∪ {e}. Now
-consider T ∪ {e}. Since T is a spanning tree, it has exactly one edge connecting S and
+But if e is not a part of T , let us construct another Minimum Spanning Tree, T ′, which contains X ∪ {e}. Now consider T ∪ {e}. But since T is a spanning tree, it has only one edge connecting S and
 V − S. Let this edge be e′. Since e is the lightest edge connecting S and V − S, we′ = we.
 
-weight(T ∪ {e} − {e′}) = weight(T) + we − we′ = weight(T )
+weight (T ∪ {e} − {e′}) = weight(T) + we − we′ 
 
-T ∪ {e} − {e′} is also a tree because it contains no cycle and has n − 1 edges. Thus,
-T ∪ {e} − {e′} is also a MST of G. Hence, the cut property has been proven, and
-consequently, Kruskal’s algorithm is correct.
+                                   = weight(T )
+
+T ∪ {e} − {e′} is also a tree because it contains no cycle and has n − 1 edges. Thus, T ∪ {e} − {e′} is also a MST of G. Therefore, the cut property has been proven, and consequently, Kruskal’s algorithm is correct.
 
 # Disjoint Set Union
 
