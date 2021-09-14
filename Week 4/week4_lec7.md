@@ -44,7 +44,7 @@ Greedy Approach :  The ideal tree must have the two symbols with the fewest freq
 
 Optimum Substructure property: The cost of the tree is sum of the frequencies of all leaves and internal nodes apart from the root of the tree.
 
-Example : 
+Example :  with 133 characters in total and 6 unique characters
 
 ![Untitled](week4_lec7%20aa9e9912c4e9428b93a8d4db14da1e7b/Untitled.png)
 
@@ -54,6 +54,8 @@ As a result, we generate a binary tree for each character that additionally reta
 2. For each move to the right, append 1 to the code.
 
 ![Untitled](week4_lec7%20aa9e9912c4e9428b93a8d4db14da1e7b/Untitled%201.png)
+
+Thus, we get following codes:
 
 ![Untitled](week4_lec7%20aa9e9912c4e9428b93a8d4db14da1e7b/Untitled%202.png)
 
@@ -68,7 +70,7 @@ Since we have 6 characters assume each character to be stored using 3-bit code. 
 - TOTAL: 238
 - Saved = 399 - 238 = 161 which is about 40% of the storage space.
 
-Algorithm for Hauffman Coding
+Algorithm for Huffman Coding
 
 ```coffeescript
 Build a priority queue H out of the frequencies
@@ -87,8 +89,6 @@ It relates to the information in the system and how to optimum encode it. We rea
 more compressible = less random = more predictable
 
 Suppose there are n possible outcomes, with probabilities $p_1,p_2,...,p_n$. Assume that $p_i's$  are all of the form $(1/2)^{k}$and are observed frequencies.
-
-Average number of bits needed to encode a single draw from the distribution is:
 
 ![Untitled](week4_lec7%20aa9e9912c4e9428b93a8d4db14da1e7b/Untitled%204.png)
 
